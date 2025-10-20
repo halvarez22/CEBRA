@@ -1,0 +1,587 @@
+/* Estilos base para la aplicación CEBRA - Estilo Minimalista Incubeta */
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Animaciones sutiles */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.animate-slideIn {
+  animation: slideIn 0.8s ease-out;
+}
+
+/* Contenedor principal */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Mejoras para accesibilidad */
+button:focus,
+a:focus {
+  outline: 2px solid #0066cc;
+  outline-offset: 2px;
+}
+
+/* === ESTILO MINIMALISTA INCUBETA === */
+
+/* Espaciado generoso */
+.section-spacing {
+  padding: 80px 0;
+}
+
+.section-spacing-sm {
+  padding: 60px 0;
+}
+
+/* Tipografía limpia */
+.heading-xl {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #1a1a1a;
+}
+
+.heading-lg {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: #1a1a1a;
+}
+
+.heading-md {
+  font-size: 1.875rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #1a1a1a;
+}
+
+.text-body {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #4a4a4a;
+}
+
+.text-small {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #6a6a6a;
+}
+
+/* Botones minimalistas */
+.btn-primary {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background-color: #333333;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #1a1a1a;
+  padding: 16px 32px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-secondary:hover {
+  border-color: #1a1a1a;
+  background-color: #f8f8f8;
+}
+
+/* Cards minimalistas */
+.card {
+  background: white;
+  border: 1px solid #f0f0f0;
+  border-radius: 12px;
+  padding: 32px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border-color: #e0e0e0;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+/* Grid layouts */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+/* Fondos neutros */
+.bg-light {
+  background-color: #fafafa;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+/* Separadores sutiles */
+.divider {
+  height: 1px;
+  background-color: #f0f0f0;
+  margin: 60px 0;
+}
+
+/* Efectos hover sutiles */
+.hover-lift {
+  transition: transform 0.2s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+}
+
+/* Imágenes con bordes redondeados */
+.image-rounded {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Texto con acento sutil */
+.text-accent {
+  color: #0066cc;
+}
+
+/* Espaciado entre secciones */
+.section-gap {
+  margin-bottom: 120px;
+}
+
+/* === EFECTO DE PIEL DE CEBRA REALISTA CON SVG === */
+
+/* Patrón SVG de rayas curvas orgánicas */
+.zebra-skin-header {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="80" viewBox="0 0 120 80"><defs><pattern id="zebra" patternUnits="userSpaceOnUse" width="120" height="80"><path d="M0 0 Q30 20 60 0 T120 0 V80 H0 Z" fill="%23000"/><path d="M0 0 Q30 -20 60 0 T120 0 V80 H0 Z" fill="%23fff" transform="translate(0 40)"/><path d="M0 0 Q25 15 50 0 T100 0 V80 H0 Z" fill="%23000" transform="translate(20 0)"/><path d="M0 0 Q25 -15 50 0 T100 0 V80 H0 Z" fill="%23fff" transform="translate(20 40)"/></pattern></defs><rect width="120" height="80" fill="url(%23zebra)"/></svg>');
+  background-repeat: repeat;
+  background-size: 120px 80px;
+  filter: brightness(1.05) contrast(1.1);
+  position: relative;
+}
+
+/* Piel de cebra REAL usando imagen auténtica */
+.zebra-skin-natural {
+  background-image: url('/images/piel de cebra.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(1.1) contrast(1.2) saturate(1.1);
+  position: relative;
+}
+
+/* Efecto sutil para complementar la imagen real */
+.zebra-skin-natural::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, transparent 30%),
+    linear-gradient(225deg, rgba(255, 255, 255, 0.03) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+/* Brillo natural muy sutil */
+.zebra-skin-natural::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.04) 0%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  pointer-events: none;
+}
+
+/* Sin animación - patrón estático */
+
+/* Contenedores para texto con máximo contraste */
+.zebra-text-container {
+  background: rgba(255, 255, 255, 0.98);
+  border: 3px solid rgba(80, 40, 140, 0.9);
+  border-radius: 10px;
+  padding: 10px 18px;
+  box-shadow: 
+    0 6px 20px rgba(0, 0, 0, 0.4),
+    inset 0 2px 4px rgba(255, 255, 255, 0.9),
+    0 0 0 1px rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(15px);
+  position: relative;
+  z-index: 20;
+  transition: all 0.3s ease;
+}
+
+.zebra-text-container:hover {
+  background: rgba(255, 255, 255, 1);
+  border-color: rgba(80, 40, 140, 1);
+  transform: translateY(-2px);
+  box-shadow: 
+    0 8px 25px rgba(0, 0, 0, 0.5),
+    inset 0 2px 4px rgba(255, 255, 255, 1),
+    0 0 0 1px rgba(255, 255, 255, 0.8);
+}
+
+.zebra-text {
+  color: #ff4500;
+  font-weight: 800;
+  text-shadow: 
+    1px 1px 0px rgba(255, 255, 255, 1),
+    2px 2px 4px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 21;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .zebra-skin-natural {
+    background-size: 80px 48px;
+  }
+  
+  .zebra-text-container {
+    padding: 8px 14px;
+    border-width: 2px;
+  }
+  
+  .zebra-text {
+    font-size: 0.9rem;
+  }
+}
+
+/* Degradados CSS Lineales para Hero - Basado en el código del cliente */
+.hero-gradient-1 {
+  background: linear-gradient(to bottom, #1a0033, #4b0082);
+}
+
+.hero-gradient-2 {
+  background: linear-gradient(to right, #1a0033, #4b0082);
+}
+
+.hero-gradient-3 {
+  background: linear-gradient(45deg, #1a0033, #4b0082);
+}
+
+.hero-gradient-4 {
+  background: linear-gradient(to bottom, #1a0033, #4b0082);
+}
+
+/* Efecto radial naranja como en el código del cliente */
+.hero-radial-orange {
+  background: radial-gradient(circle at center, #ff4500 0%, #ff8c00 100%);
+  box-shadow: 
+    0 0 60px rgba(255, 69, 0, 0.8),
+    0 0 120px rgba(255, 140, 0, 0.6),
+    0 0 180px rgba(255, 140, 0, 0.4),
+    inset 0 0 30px rgba(255, 255, 255, 0.3),
+    inset 0 0 60px rgba(255, 140, 0, 0.2);
+  position: relative;
+  animation: sunGlow 4s ease-in-out infinite alternate;
+}
+
+/* Animación de brillo solar */
+@keyframes sunGlow {
+  0% {
+    box-shadow: 
+      0 0 60px rgba(255, 69, 0, 0.8),
+      0 0 120px rgba(255, 140, 0, 0.6),
+      0 0 180px rgba(255, 140, 0, 0.4),
+      inset 0 0 30px rgba(255, 255, 255, 0.3),
+      inset 0 0 60px rgba(255, 140, 0, 0.2);
+  }
+  100% {
+    box-shadow: 
+      0 0 80px rgba(255, 69, 0, 1),
+      0 0 160px rgba(255, 140, 0, 0.8),
+      0 0 240px rgba(255, 140, 0, 0.6),
+      inset 0 0 40px rgba(255, 255, 255, 0.4),
+      inset 0 0 80px rgba(255, 140, 0, 0.3);
+  }
+}
+
+/* Efecto de partículas brillantes alrededor del sol */
+.hero-radial-orange::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.3) 1px, transparent 1px),
+    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.2) 1px, transparent 1px),
+    radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.2) 1px, transparent 1px),
+    radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.3) 1px, transparent 1px);
+  background-size: 50px 50px, 30px 30px, 40px 40px, 35px 35px;
+  animation: sparkle 3s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes sparkle {
+  0% { opacity: 0.3; transform: rotate(0deg); }
+  50% { opacity: 0.8; transform: rotate(180deg); }
+  100% { opacity: 0.3; transform: rotate(360deg); }
+}
+
+/* Efecto de halo exterior */
+.hero-radial-orange::after {
+  content: '';
+  position: absolute;
+  top: -40px;
+  left: -40px;
+  right: -40px;
+  bottom: -40px;
+  background: radial-gradient(circle at center, transparent 60%, rgba(255, 140, 0, 0.1) 70%, transparent 100%);
+  border-radius: 50%;
+  animation: halo 6s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes halo {
+  0% { 
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  100% { 
+    transform: scale(1.1);
+    opacity: 0.6;
+  }
+}
+
+/* Cards con transparencia como en el código del cliente */
+.hero-transparent-card {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+/* Botón CTA con el color exacto del cliente */
+.hero-cta-button {
+  background-color: #ff4500;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-cta-button:hover {
+  background-color: #ff8c00;
+  transform: translateY(-2px);
+}
+
+/* Superposiciones de Color para Hero */
+.hero-overlay-purple {
+  position: relative;
+}
+
+.hero-overlay-purple::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to top, 
+    rgba(50, 20, 100, 0.8) 0%, /* Púrpura oscuro en la parte inferior */
+    rgba(255, 100, 70, 0.4) 50%, /* Rojo Naranja más tenue en el medio */
+    transparent 100% /* Transparente en la parte superior */
+  );
+  z-index: 1;
+}
+
+.hero-overlay-magenta {
+  position: relative;
+}
+
+.hero-overlay-magenta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(200, 50, 150, 0.5);
+  z-index: 1;
+}
+
+.hero-overlay-orange {
+  position: relative;
+}
+
+.hero-overlay-orange::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(135deg, 
+    rgba(255, 100, 70, 0.6) 0%, 
+    rgba(200, 50, 150, 0.4) 100%
+  );
+  z-index: 1;
+}
+
+/* Asegurar que el contenido del hero esté encima de los overlays */
+.hero-overlay-purple > *,
+.hero-overlay-magenta > *,
+.hero-overlay-orange > * {
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+
+/* Fondos combinados con imagen y degradado para Hero */
+.hero-with-image-and-overlay {
+  background-image: 
+    linear-gradient(to right, 
+      rgba(50, 20, 100, 0.7) 0%, 
+      rgba(200, 50, 150, 0.5) 100%
+    ),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect width="1200" height="600" fill="%23f0f0f0"/></svg>');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Animación sutil de degradado para Hero */
+@keyframes heroGradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.hero-animated-gradient {
+  background-size: 200% 200%;
+  animation: heroGradientShift 12s ease infinite;
+}
+
+/* Efectos de hover para elementos del hero con degradados */
+.hero-gradient-hover:hover {
+  background-image: linear-gradient(135deg, 
+    rgba(30, 60, 120, 0.9) 0%, /* Azul profundo más intenso */
+    rgba(80, 40, 140, 0.8) 30%, /* Azul-púrpura más intenso */
+    rgba(120, 30, 160, 0.7) 60%, /* Púrpura vibrante más intenso */
+    rgba(255, 120, 60, 0.6) 100% /* Naranja tenue más intenso */
+  );
+  transition: background-image 0.3s ease;
+}
+
+/* Texto del hero con contraste adecuado */
+.hero-text-white {
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-text-accent {
+  color: #ffd700; /* Dorado para acentos sobre fondos coloridos */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .heading-xl {
+    font-size: 2.5rem;
+  }
+  
+  .heading-lg {
+    font-size: 2rem;
+  }
+  
+  .section-spacing {
+    padding: 60px 0;
+  }
+  
+  .container {
+    padding: 0 16px;
+  }
+}

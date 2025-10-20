@@ -1,0 +1,5 @@
+{
+  "name": "CEBRA Replica en Español",
+  "description": "Una réplica visual de la página de inicio de CEBRA, traducida al español. Creada con React y Tailwind CSS para una estética y funcionalidad excelentes.",
+  "requestFramePermissions": []
+}
